@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 const brands = [
   { name: "Java", logo: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all mx-6">
@@ -47,9 +47,11 @@ const BrandLogos = () => {
           {[...brands, ...brands, ...brands].map((brand, index) => (
             <div key={index} className="flex items-center justify-center">
               {typeof brand.logo === "string" ? (
-                <img
+                <Image
                   src={brand.logo}
                   alt={brand.name}
+                  width={150}  // Set width
+                  height={150}  // Set height
                   className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all mx-6"
                 />
               ) : (

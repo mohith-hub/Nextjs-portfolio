@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import Image from "next/image"; // Import Image from next/image
 
 const Hero = () => {
   return (
@@ -60,9 +60,11 @@ const Hero = () => {
 
           {/* Profile Picture */}
           <div className="w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-gray-300 shadow-lg">
-            <img
-              src="/profile1.jpg"
+            <Image
+              src="/profile1.jpg"  // Use Image component
               alt="Your Name"
+              width={128}  // Set width
+              height={128}  // Set height
               className="w-full h-full object-cover"
             />
           </div>

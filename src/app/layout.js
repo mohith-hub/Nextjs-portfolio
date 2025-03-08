@@ -1,7 +1,9 @@
-import "./globals.css";
- 
+"use client";
 import { Inter } from "next/font/google";
+import './globals.css';
 
+
+// Use the Inter font globally
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
@@ -13,8 +15,7 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
       </head>
-      <body className={inter.className}>
-   
+      <body className={inter.className}> {/* This applies the Inter font globally */}
         {children}
       </body>
     </html>
