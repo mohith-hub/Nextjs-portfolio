@@ -72,7 +72,7 @@ const Hero = () => {
 
         {/* Main Heading (Correct Line Breaks & Spacing) */}
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-[1.5] mt-10">
-          <span className="block mb-2">I'm Mohith a,</span>
+          <span className="block mb-2">I am Mohith a,</span>
           <span className="block mb-2">
             <span className="text-black">Front-End</span> 
           </span>
