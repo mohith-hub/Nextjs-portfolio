@@ -13,7 +13,7 @@ const Hero = () => {
             href="mailto:mohithpupppala@gmail.com" 
             className="hover:text-teal-600 transition-colors duration-300 cursor-pointer"
           >
-            mohithpupppala@gmail.com
+            Mail
           </a>
 
           {/* Resume Download Button */}
