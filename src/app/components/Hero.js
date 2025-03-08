@@ -5,9 +5,9 @@ const Hero = () => {
   return (
     <section id="home" className="w-full min-h-[95vh] flex flex-col justify-center items-center bg-[#eceae6] rounded-b-[120px] shadow-lg relative">
       {/* Header Inside Hero */}
-      <header className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-6">
+      <header className="absolute top-0 left-0 w-full flex justify-between items-center px-6 py-6 sm:px-10">
         {/* Email + Copy + CV (Blended into Background) */}
-        <div className="flex space-x-3 px-4 py-1 bg-transparent text-black-700 text-sm">
+        <div className="flex space-x-6 items-center">
           {/* Clickable Email with Hover Effect */}
           <a 
             href="mailto:mohithpupppala@gmail.com" 
@@ -28,7 +28,7 @@ const Hero = () => {
 
         {/* Navigation Links with Scroll Functionality */}
         <nav>
-          <ul className="flex space-x-6 text-black-700">
+          <ul className="flex space-x-6 sm:flex-col sm:space-y-4 sm:text-center sm:mt-4 items-center">
             <li>
               <a href="#home" className="hover:text-teal-600 transition-colors duration-300">
                 Home
