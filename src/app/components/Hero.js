@@ -10,6 +10,11 @@ const Hero = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Close the menu (for back button)
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <section id="home" className="w-full min-h-[95vh] flex flex-col justify-center items-center bg-[#eceae6] rounded-b-[120px] shadow-lg relative">
       {/* Header Inside Hero */}
@@ -68,6 +73,14 @@ const Hero = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <nav className="sm:hidden absolute top-0 left-0 right-0 bg-white shadow-lg py-4 px-6">
+          {/* Back Button */}
+          <button 
+            onClick={closeMenu} 
+            className="absolute top-4 left-4 text-black font-bold text-lg"
+          >
+            Back
+          </button>
+
           <ul className="flex flex-col space-y-4 text-center">
             <li>
               <a href="#home" className="hover:text-teal-600 transition-colors duration-300">
