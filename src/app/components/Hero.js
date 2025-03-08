@@ -1,7 +1,15 @@
 "use client";
+import { useState } from "react"; // Import useState for handling menu toggle
 import Image from "next/image"; // Import Image from next/image
 
 const Hero = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to toggle menu visibility
+
+  // Toggle the menu
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <section id="home" className="w-full min-h-[95vh] flex flex-col justify-center items-center bg-[#eceae6] rounded-b-[120px] shadow-lg relative">
       {/* Header Inside Hero */}
@@ -27,8 +35,8 @@ const Hero = () => {
         </div>
 
         {/* Navigation Links with Scroll Functionality */}
-        <nav>
-          <ul className="flex space-x-6 sm:flex-col sm:space-y-4 sm:text-center sm:mt-4 items-center">
+        <nav className="sm:flex sm:space-x-6 sm:items-center sm:flex-row hidden">
+          <ul className="flex space-x-6 items-center">
             <li>
               <a href="#home" className="hover:text-teal-600 transition-colors duration-300">
                 Home
@@ -46,7 +54,39 @@ const Hero = () => {
             </li>
           </ul>
         </nav>
+
+        {/* Hamburger Icon for Mobile */}
+        <div className="sm:hidden flex items-center">
+          <button onClick={toggleMenu} className="text-black">
+            <span className="block w-6 h-1 bg-black mb-1"></span>
+            <span className="block w-6 h-1 bg-black mb-1"></span>
+            <span className="block w-6 h-1 bg-black"></span>
+          </button>
+        </div>
       </header>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <nav className="sm:hidden absolute top-0 left-0 right-0 bg-white shadow-lg py-4 px-6">
+          <ul className="flex flex-col space-y-4 text-center">
+            <li>
+              <a href="#home" className="hover:text-teal-600 transition-colors duration-300">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#projects" className="hover:text-teal-600 transition-colors duration-300">
+                Projects
+              </a>
+            </li>
+            <li>
+              <a href="#contact" className="hover:text-teal-600 transition-colors duration-300">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+      )}
 
       {/* Main Content */}
       <div className="text-center flex flex-col items-center">
